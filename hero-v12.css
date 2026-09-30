@@ -1,0 +1,12 @@
+/* Landing-only layout: bounded columns and artwork, independent of app pages. */
+.refined-landing .v3-hero{box-sizing:border-box;width:calc(100% - 64px);max-width:1280px;margin:0 auto;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:40px;padding:40px 0 64px;min-height:0;align-items:center}
+.refined-landing .hero-text{min-width:0}.refined-landing .hero-text h1{font-size:clamp(44px,4.6vw,64px);line-height:1.08;letter-spacing:-2.5px}.refined-landing .hero-text>p{max-width:440px;font-size:16px;line-height:1.75}
+.refined-landing .v3-scene-stage{width:100%;max-width:620px;min-width:0;justify-self:center;margin:0;gap:0}
+.refined-landing .seamless-neighbourhood{width:100%;max-width:620px;margin:0;aspect-ratio:3/2;flex:none;background-image:url('assets/neighbourhood-motion.png');background-size:200% 200%;background-position:0 0;animation:grove-clear-poses 9s steps(1,end) infinite,neighbourhood-camera 12s ease-in-out infinite}
+/* One fully opaque image at a time: no overlapping faces or white dissolve gaps. */
+.refined-landing .seamless-neighbourhood .scene-frame{display:none;animation:none}
+.refined-landing .scene-badge{margin:0 0 16px}.refined-landing .scene-badge strong{font-size:23px}.refined-landing .scene-caption{width:100%;box-sizing:border-box;padding:18px 8px 0;gap:12px;flex-wrap:wrap}.refined-landing .scene-caption>span{font-size:12px;line-height:1.5}
+@keyframes grove-clear-poses{0%{background-position:0 0}25%{background-position:100% 0}50%{background-position:0 100%}75%{background-position:100% 100%}}
+@media(max-width:900px){.refined-landing .v3-hero{width:calc(100% - 48px);gap:24px}.refined-landing .hero-text h1{font-size:clamp(36px,5vw,46px);letter-spacing:-1.8px}.refined-landing .hero-text>p{font-size:14px}.refined-landing .scene-badge strong{font-size:20px}}
+@media(max-width:700px){.refined-landing .v3-hero{grid-template-columns:minmax(0,1fr);width:calc(100% - 40px);padding:28px 0 48px;gap:32px}.refined-landing .hero-text h1{font-size:clamp(38px,9vw,54px)}.refined-landing .v3-scene-stage{max-width:540px}.refined-landing .seamless-neighbourhood{width:100%}.refined-landing .scene-caption{padding-top:12px}.refined-landing .scene-badge{margin-bottom:10px}}
+@media(prefers-reduced-motion:reduce){.refined-landing .seamless-neighbourhood{animation:none!important;background-position:0 0}}
